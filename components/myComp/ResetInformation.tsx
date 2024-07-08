@@ -27,6 +27,7 @@ const ResetInformation = () => {
             <p>Group: {Group}</p>
             <p>Class: {Class}</p>
             <p>TimeSlot: {TimeSlot}</p>
+            <p>you can get data / IDs</p>
       </div>
       
     </div>
