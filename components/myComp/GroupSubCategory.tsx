@@ -1,5 +1,4 @@
-
-//import { useState } from "react";
+"use client"
 import { Button } from "../ui/button";
 import { groupSubCategories } from "@/constants/data";
 import useInformationStore from "@/store/getInformation";

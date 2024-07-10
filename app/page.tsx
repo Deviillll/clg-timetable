@@ -1,5 +1,6 @@
 
 import InformationContainer from '@/components/InformationContainer'
+import TableContainer from '@/components/TableContainer'
 
 
 type Props = {}
@@ -7,8 +8,9 @@ type Props = {}
 const page = (props: Props) => {
   
   return (
-    <div className='h-screen'>
+    <div className=''>
       <InformationContainer />
+      <TableContainer />
      
 
     </div>

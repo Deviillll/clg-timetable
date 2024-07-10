@@ -8,8 +8,8 @@ import useInformationStore from "@/store/getInformation";
 const InformationContainer = () => {
     const Group = useInformationStore((state) => state.Group);
   return (
-    <div>
-        <ResetInformation />
+    <div className="">
+        {/* <ResetInformation /> */}
         <div>
         <GroupList />
         </div>
@@ -17,9 +17,9 @@ const InformationContainer = () => {
 <div>
      <GroupSubCategory selectedGroup={Group} />
      </div>
-     <div>
+     {/* <div>
         <TimeSlots selectedGroup={Group} />
-     </div>
+     </div> */}
       
     </div>
   )
