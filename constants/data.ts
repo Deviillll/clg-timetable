@@ -174,8 +174,8 @@ interface Group {
 
         const departments: Department[] = [
           {
-             id: '1department',
-              name: 'Computer Science',
+             id: 'cs1department',
+              name: 'Computer Science G1',
               rooms: ['Room 1', 'Room 2', 'Room 3'],
               teachers: ['Teacher 1', 'Teacher 2', 'Teacher 3'],
               shift: "both",
@@ -183,8 +183,26 @@ interface Group {
               group: ['G1', 'G2']
           },
           {
-            id: '2department',
-            name: 'BBA',
+             id: 'cs2department',
+              name: 'Computer Science G2',
+              rooms: ['Room 1', 'Room 2', 'Room 3'],
+              teachers: ['Teacher 1', 'Teacher 2', 'Teacher 3'],
+              shift: "both",
+              isDoubleGroup: true,
+              group: ['G1', 'G2']
+          },
+          {
+            id: 'bba1department',
+            name: 'BBA G1',
+            rooms: ['Room 4', 'Room 5', 'Room 6'],
+            teachers: ['Teacher 4', 'Teacher 5', 'Teacher 6'],
+            shift: "both",
+            isDoubleGroup: true,
+            group: ['G1', 'G2']
+          },
+          {
+            id: 'bba2department',
+            name: 'BBA G2',
             rooms: ['Room 4', 'Room 5', 'Room 6'],
             teachers: ['Teacher 4', 'Teacher 5', 'Teacher 6'],
             shift: "both",
@@ -263,3 +281,529 @@ interface Group {
         export { departments};
 
         //previous data
+
+        interface TimeTableData {
+          id: string;
+          subject: string;
+          room: string;
+          teacher: string;
+         
+        }
+        interface TimeTable {
+          [key: string]: TimeTableData[];
+        }
+
+
+        export const timetableData:TimeTable = {
+          "1st semester": [
+            { id: "1", subject: "Math", teacher: "Mr. Smith", room: "101" },
+            { id: "2", subject: "Science", teacher: "Ms. Johnson", room: "102" },
+          ],
+          "3 semester": [
+            { id: "1", subject: "English", teacher: "Mr. Brown", room: "201" },
+            { id: "2", subject: "History", teacher: "Ms. Davis", room: "202" },
+          ],
+          "5 semester": [
+            { id: "1", subject: "Physics", teacher: "Mr. Wilson", room: "301" },
+            { id: "2", subject: "Chemistry", teacher: "Ms. Martinez", room: "302" },
+          ],
+          "7 semester": [
+            { id: "1", subject: "Biology", teacher: "Mr. Anderson", room: "401" },
+            { id: "2", subject: "Math", teacher: "Ms. Thomas", room: "402" },
+          ],
+        };
+
+
+
+       export const newData ={
+          "Computer Science G1":[ {
+            "id": "1",
+            "subject": "Math",
+            "teacher": "Mr. Smith",
+            "room": "101"
+           
+          },
+          {
+            "id": "2",
+            "subject": "Science",
+            "teacher": "Ms. Johnson",
+            "room": "102"
+          } ,
+          {
+            "id": "3",
+            "subject": "Math",
+            "teacher": "Mr. Smith",
+            "room": "101"
+           
+          },
+          {
+            "id": "4",
+            "subject": "Science",
+            "teacher": "Ms. Johnson",
+            "room": "102"
+          },
+          {
+            "id": "5",
+            "subject": "Math",
+            "teacher": "Mr. Smith",
+            "room": "101"
+           
+          },
+          {
+            "id": "6",
+            "subject": "Science",
+            "teacher": "Ms. Johnson",
+            "room": "102"
+          },
+          {
+            "id": "7",
+            "subject": "Math",
+            "teacher": "Mr. Smith",
+            "room": "101"
+           
+          },
+        
+        ],
+        "Computer Science G2":[ {
+          "id": "1",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "2",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        } ,
+        {
+          "id": "3",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "4",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "5",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "6",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "7",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+
+        
+        
+        ],
+        "BBA G1":[ {
+          "id": "1",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "2",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        } ,
+        {
+          "id": "3",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "4",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "5",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "6",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "7",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+
+        
+        ],
+        "BBA G2":[ {
+          "id": "1",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "2",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        } ,
+        {
+          "id": "3",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "4",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "5",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "6",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "7",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+
+        
+        ],
+        "English":[ {
+          "id": "1",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "2",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        } ,
+        {
+          "id": "3",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "4",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "5",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "6",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "7",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+
+        
+        ],
+        "Mathematics":[ {
+          "id": "1",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "2",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        } ,
+        {
+          "id": "3",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "4",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "5",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "6",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "7",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+
+        
+        ],
+        "Physics":[ {
+          "id": "1",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "2",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        } ,
+        {
+          "id": "3",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "4",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "5",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "6",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "7",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+
+        
+        ],
+        "Chemistry":[ {
+          "id": "1",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "2",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        } ,
+        {
+          "id": "3",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "4",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "5",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "6",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "7",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+
+        
+        ],
+        "Urdu":[ {
+          "id": "1",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "2",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        } ,
+        {
+          "id": "3",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "4",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "5",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "6",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "7",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+
+        
+        ],
+        "Islamiyat":[ {
+          "id": "1",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "2",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        } ,
+        {
+          "id": "3",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "4",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "5",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+        {
+          "id": "6",
+          "subject": "Science",
+          "teacher": "Ms. Johnson",
+          "room": "102"
+        },
+        {
+          "id": "7",
+          "subject": "Math",
+          "teacher": "Mr. Smith",
+          "room": "101"
+         
+        },
+
+        
+        ],
+        }

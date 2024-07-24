@@ -9,11 +9,13 @@ const useInformationStore = create(
       Group: '', 
       Class: '', 
       TimeSlot: '',
+      rowsLenght: '',
       
       //  update functions...
       setGroup: (newGroup) => set({ Group: newGroup }),
       setClass: (newClass) => set({ Class: newClass }),
       setTimeSlot: (newTimeSlot) => set({ TimeSlot: newTimeSlot }),
+      setRowsLenght: (newRowsLenght) => set({ rowsLenght: newRowsLenght }),
     }),
 
 
