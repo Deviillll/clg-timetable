@@ -282,528 +282,418 @@ interface Group {
 
         //previous data
 
-        interface TimeTableData {
-          id: string;
+        export interface TimeSlot {
           subject: string;
-          room: string;
           teacher: string;
-         
+          room: string;
         }
-        interface TimeTable {
-          [key: string]: TimeTableData[];
+        
+        export interface TimetableData {
+          [key: string]: TimeSlot[][];
         }
-
-
-        export const timetableData:TimeTable = {
+        
+        export const timetableData: TimetableData = {
           "1st semester": [
-            { id: "1", subject: "Math", teacher: "Mr. Smith", room: "101" },
-            { id: "2", subject: "Science", teacher: "Ms. Johnson", room: "102" },
+            [
+              { subject: "Math", teacher: "Mr. Smith", room: "101" },
+              { subject: "Computer Science", teacher: "Ms. Johnson", room: "102" },
+              { subject: "English", teacher: "Mr. Brown", room: "103" },
+              { subject: "Urdu", teacher: "Ms. Davis", room: "104" },
+              { subject: "Science", teacher: "Mr. Wilson", room: "105" },
+              { subject: "History", teacher: "Mr. Clark", room: "106" },
+              { subject: "Geography", teacher: "Ms. Lewis", room: "107" },
+            ],
+            [
+              { subject: "Math", teacher: "Mr. Smith", room: "108" },
+              { subject: "Computer Science", teacher: "Ms. Johnson", room: "109" },
+              { subject: "English", teacher: "Mr. Brown", room: "110" },
+              { subject: "Urdu", teacher: "Ms. Davis", room: "111" },
+              { subject: "Science", teacher: "Mr. Wilson", room: "112" },
+              { subject: "History", teacher: "Mr. Clark", room: "113" },
+              { subject: "Geography", teacher: "Ms. Lewis", room: "114" },
+            ],
+            [
+              { subject: "Math", teacher: "Mr. Smith", room: "108" },
+              { subject: "Computer Science", teacher: "Ms. Johnson", room: "109" },
+              { subject: "English", teacher: "Mr. Brown", room: "110" },
+              { subject: "Urdu", teacher: "Ms. Davis", room: "111" },
+              { subject: "Science", teacher: "Mr. Wilson", room: "112" },
+              { subject: "History", teacher: "Mr. Clark", room: "113" },
+              { subject: "Geography", teacher: "Ms. Lewis", room: "114" },
+            ],
+            [
+              { subject: "Math", teacher: "Mr. Smith", room: "108" },
+              { subject: "Computer Science", teacher: "Ms. Johnson", room: "109" },
+              { subject: "English", teacher: "Mr. Brown", room: "110" },
+              { subject: "Urdu", teacher: "Ms. Davis", room: "111" },
+              { subject: "Science", teacher: "Mr. Wilson", room: "112" },
+              { subject: "History", teacher: "Mr. Clark", room: "113" },
+              { subject: "Geography", teacher: "Ms. Lewis", room: "114" },
+            ],
+            [
+              { subject: "Math", teacher: "Mr. Smith", room: "108" },
+              { subject: "Computer Science", teacher: "Ms. Johnson", room: "109" },
+              { subject: "English", teacher: "Mr. Brown", room: "110" },
+              { subject: "Urdu", teacher: "Ms. Davis", room: "111" },
+              { subject: "Science", teacher: "Mr. Wilson", room: "112" },
+              { subject: "History", teacher: "Mr. Clark", room: "113" },
+              { subject: "Geography", teacher: "Ms. Lewis", room: "114" },
+            ],
+            [
+              { subject: "Math", teacher: "Mr. Smith", room: "108" },
+              { subject: "Computer Science", teacher: "Ms. Johnson", room: "109" },
+              { subject: "English", teacher: "Mr. Brown", room: "110" },
+              { subject: "Urdu", teacher: "Ms. Davis", room: "111" },
+              { subject: "Science", teacher: "Mr. Wilson", room: "112" },
+              { subject: "History", teacher: "Mr. Clark", room: "113" },
+              { subject: "Geography", teacher: "Ms. Lewis", room: "114" },
+            ],
+            [
+              { subject: "Math", teacher: "Mr. Smith", room: "108" },
+              { subject: "Computer Science", teacher: "Ms. Johnson", room: "109" },
+              { subject: "English", teacher: "Mr. Brown", room: "110" },
+              { subject: "Urdu", teacher: "Ms. Davis", room: "111" },
+              { subject: "Science", teacher: "Mr. Wilson", room: "112" },
+              { subject: "History", teacher: "Mr. Clark", room: "113" },
+              { subject: "Geography", teacher: "Ms. Lewis", room: "114" },
+            ],
+            [
+              { subject: "Math", teacher: "Mr. Smith", room: "108" },
+              { subject: "Computer Science", teacher: "Ms. Johnson", room: "109" },
+              { subject: "English", teacher: "Mr. Brown", room: "110" },
+              { subject: "Urdu", teacher: "Ms. Davis", room: "111" },
+              { subject: "Science", teacher: "Mr. Wilson", room: "112" },
+              { subject: "History", teacher: "Mr. Clark", room: "113" },
+              { subject: "Geography", teacher: "Ms. Lewis", room: "114" },
+            ],
+            [
+              { subject: "Math", teacher: "Mr. Smith", room: "108" },
+              { subject: "Computer Science", teacher: "Ms. Johnson", room: "109" },
+              { subject: "English", teacher: "Mr. Brown", room: "110" },
+              { subject: "Urdu", teacher: "Ms. Davis", room: "111" },
+              { subject: "Science", teacher: "Mr. Wilson", room: "112" },
+              { subject: "History", teacher: "Mr. Clark", room: "113" },
+              { subject: "Geography", teacher: "Ms. Lewis", room: "114" },
+            ],
+            [
+              { subject: "Math", teacher: "Mr. Smith", room: "108" },
+              { subject: "Computer Science", teacher: "Ms. Johnson", room: "109" },
+              { subject: "English", teacher: "Mr. Brown", room: "110" },
+              { subject: "Urdu", teacher: "Ms. Davis", room: "111" },
+              { subject: "Science", teacher: "Mr. Wilson", room: "112" },
+              { subject: "History", teacher: "Mr. Clark", room: "113" },
+              { subject: "Geography", teacher: "Ms. Lewis", room: "114" },
+            ],
+            // Repeat for 8 more classes
           ],
-          "3 semester": [
-            { id: "1", subject: "English", teacher: "Mr. Brown", room: "201" },
-            { id: "2", subject: "History", teacher: "Ms. Davis", room: "202" },
+          "3rd semester": [
+            [
+              { subject: "Advanced Math", teacher: "Mr. Smith", room: "201" },
+              { subject: "Data Structures", teacher: "Ms. Johnson", room: "202" },
+              { subject: "Literature", teacher: "Mr. Brown", room: "203" },
+              { subject: "Advanced Urdu", teacher: "Ms. Davis", room: "204" },
+              { subject: "Physics", teacher: "Mr. Wilson", room: "205" },
+              { subject: "World History", teacher: "Mr. Clark", room: "206" },
+              { subject: "Environmental Science", teacher: "Ms. Lewis", room: "207" },
+            ],
+            [
+              { subject: "Advanced Math", teacher: "Mr. Smith", room: "208" },
+              { subject: "Data Structures", teacher: "Ms. Johnson", room: "209" },
+              { subject: "Literature", teacher: "Mr. Brown", room: "210" },
+              { subject: "Advanced Urdu", teacher: "Ms. Davis", room: "211" },
+              { subject: "Physics", teacher: "Mr. Wilson", room: "212" },
+              { subject: "World History", teacher: "Mr. Clark", room: "213" },
+              { subject: "Environmental Science", teacher: "Ms. Lewis", room: "214" },
+            ],
+            [
+              { subject: "Advanced Math", teacher: "Mr. Smith", room: "208" },
+              { subject: "Data Structures", teacher: "Ms. Johnson", room: "209" },
+              { subject: "Literature", teacher: "Mr. Brown", room: "210" },
+              { subject: "Advanced Urdu", teacher: "Ms. Davis", room: "211" },
+              { subject: "Physics", teacher: "Mr. Wilson", room: "212" },
+              { subject: "World History", teacher: "Mr. Clark", room: "213" },
+              { subject: "Environmental Science", teacher: "Ms. Lewis", room: "214" },
+            ],
+            [
+              { subject: "Advanced Math", teacher: "Mr. Smith", room: "208" },
+              { subject: "Data Structures", teacher: "Ms. Johnson", room: "209" },
+              { subject: "Literature", teacher: "Mr. Brown", room: "210" },
+              { subject: "Advanced Urdu", teacher: "Ms. Davis", room: "211" },
+              { subject: "Physics", teacher: "Mr. Wilson", room: "212" },
+              { subject: "World History", teacher: "Mr. Clark", room: "213" },
+              { subject: "Environmental Science", teacher: "Ms. Lewis", room: "214" },
+            ],
+            [
+              { subject: "Advanced Math", teacher: "Mr. Smith", room: "208" },
+              { subject: "Data Structures", teacher: "Ms. Johnson", room: "209" },
+              { subject: "Literature", teacher: "Mr. Brown", room: "210" },
+              { subject: "Advanced Urdu", teacher: "Ms. Davis", room: "211" },
+              { subject: "Physics", teacher: "Mr. Wilson", room: "212" },
+              { subject: "World History", teacher: "Mr. Clark", room: "213" },
+              { subject: "Environmental Science", teacher: "Ms. Lewis", room: "214" },
+            ],
+            [
+              { subject: "Advanced Math", teacher: "Mr. Smith", room: "208" },
+              { subject: "Data Structures", teacher: "Ms. Johnson", room: "209" },
+              { subject: "Literature", teacher: "Mr. Brown", room: "210" },
+              { subject: "Advanced Urdu", teacher: "Ms. Davis", room: "211" },
+              { subject: "Physics", teacher: "Mr. Wilson", room: "212" },
+              { subject: "World History", teacher: "Mr. Clark", room: "213" },
+              { subject: "Environmental Science", teacher: "Ms. Lewis", room: "214" },
+            ],
+            [
+              { subject: "Advanced Math", teacher: "Mr. Smith", room: "208" },
+              { subject: "Data Structures", teacher: "Ms. Johnson", room: "209" },
+              { subject: "Literature", teacher: "Mr. Brown", room: "210" },
+              { subject: "Advanced Urdu", teacher: "Ms. Davis", room: "211" },
+              { subject: "Physics", teacher: "Mr. Wilson", room: "212" },
+              { subject: "World History", teacher: "Mr. Clark", room: "213" },
+              { subject: "Environmental Science", teacher: "Ms. Lewis", room: "214" },
+            ],
+            [
+              { subject: "Advanced Math", teacher: "Mr. Smith", room: "208" },
+              { subject: "Data Structures", teacher: "Ms. Johnson", room: "209" },
+              { subject: "Literature", teacher: "Mr. Brown", room: "210" },
+              { subject: "Advanced Urdu", teacher: "Ms. Davis", room: "211" },
+              { subject: "Physics", teacher: "Mr. Wilson", room: "212" },
+              { subject: "World History", teacher: "Mr. Clark", room: "213" },
+              { subject: "Environmental Science", teacher: "Ms. Lewis", room: "214" },
+            ],
+            [
+              { subject: "Advanced Math", teacher: "Mr. Smith", room: "208" },
+              { subject: "Data Structures", teacher: "Ms. Johnson", room: "209" },
+              { subject: "Literature", teacher: "Mr. Brown", room: "210" },
+              { subject: "Advanced Urdu", teacher: "Ms. Davis", room: "211" },
+              { subject: "Physics", teacher: "Mr. Wilson", room: "212" },
+              { subject: "World History", teacher: "Mr. Clark", room: "213" },
+              { subject: "Environmental Science", teacher: "Ms. Lewis", room: "214" },
+            ],
+            [
+              { subject: "Advanced Math", teacher: "Mr. Smith", room: "208" },
+              { subject: "Data Structures", teacher: "Ms. Johnson", room: "209" },
+              { subject: "Literature", teacher: "Mr. Brown", room: "210" },
+              { subject: "Advanced Urdu", teacher: "Ms. Davis", room: "211" },
+              { subject: "Physics", teacher: "Mr. Wilson", room: "212" },
+              { subject: "World History", teacher: "Mr. Clark", room: "213" },
+              { subject: "Environmental Science", teacher: "Ms. Lewis", room: "214" },
+            ],
+            // Repeat for 8 more classes
           ],
-          "5 semester": [
-            { id: "1", subject: "Physics", teacher: "Mr. Wilson", room: "301" },
-            { id: "2", subject: "Chemistry", teacher: "Ms. Martinez", room: "302" },
+          "5th semester": [
+            [
+              { subject: "Calculus", teacher: "Mr. Smith", room: "301" },
+              { subject: "Algorithms", teacher: "Ms. Johnson", room: "302" },
+              { subject: "Creative Writing", teacher: "Mr. Brown", room: "303" },
+              { subject: "Poetry", teacher: "Ms. Davis", room: "304" },
+              { subject: "Chemistry", teacher: "Mr. Wilson", room: "305" },
+              { subject: "Modern History", teacher: "Mr. Clark", room: "306" },
+              { subject: "Geology", teacher: "Ms. Lewis", room: "307" },
+            ],
+            [
+              { subject: "Calculus", teacher: "Mr. Smith", room: "301" },
+              { subject: "Algorithms", teacher: "Ms. Johnson", room: "302" },
+              { subject: "Creative Writing", teacher: "Mr. Brown", room: "303" },
+              { subject: "Poetry", teacher: "Ms. Davis", room: "304" },
+              { subject: "Chemistry", teacher: "Mr. Wilson", room: "305" },
+              { subject: "Modern History", teacher: "Mr. Clark", room: "306" },
+              { subject: "Geology", teacher: "Ms. Lewis", room: "307" },
+            ],
+            [
+              { subject: "Calculus", teacher: "Mr. Smith", room: "301" },
+              { subject: "Algorithms", teacher: "Ms. Johnson", room: "302" },
+              { subject: "Creative Writing", teacher: "Mr. Brown", room: "303" },
+              { subject: "Poetry", teacher: "Ms. Davis", room: "304" },
+              { subject: "Chemistry", teacher: "Mr. Wilson", room: "305" },
+              { subject: "Modern History", teacher: "Mr. Clark", room: "306" },
+              { subject: "Geology", teacher: "Ms. Lewis", room: "307" },
+            ],
+            [
+              { subject: "Calculus", teacher: "Mr. Smith", room: "301" },
+              { subject: "Algorithms", teacher: "Ms. Johnson", room: "302" },
+              { subject: "Creative Writing", teacher: "Mr. Brown", room: "303" },
+              { subject: "Poetry", teacher: "Ms. Davis", room: "304" },
+              { subject: "Chemistry", teacher: "Mr. Wilson", room: "305" },
+              { subject: "Modern History", teacher: "Mr. Clark", room: "306" },
+              { subject: "Geology", teacher: "Ms. Lewis", room: "307" },
+            ],
+            [
+              { subject: "Calculus", teacher: "Mr. Smith", room: "301" },
+              { subject: "Algorithms", teacher: "Ms. Johnson", room: "302" },
+              { subject: "Creative Writing", teacher: "Mr. Brown", room: "303" },
+              { subject: "Poetry", teacher: "Ms. Davis", room: "304" },
+              { subject: "Chemistry", teacher: "Mr. Wilson", room: "305" },
+              { subject: "Modern History", teacher: "Mr. Clark", room: "306" },
+              { subject: "Geology", teacher: "Ms. Lewis", room: "307" },
+            ],
+            [
+              { subject: "Calculus", teacher: "Mr. Smith", room: "301" },
+              { subject: "Algorithms", teacher: "Ms. Johnson", room: "302" },
+              { subject: "Creative Writing", teacher: "Mr. Brown", room: "303" },
+              { subject: "Poetry", teacher: "Ms. Davis", room: "304" },
+              { subject: "Chemistry", teacher: "Mr. Wilson", room: "305" },
+              { subject: "Modern History", teacher: "Mr. Clark", room: "306" },
+              { subject: "Geology", teacher: "Ms. Lewis", room: "307" },
+            ],
+            [
+              { subject: "Calculus", teacher: "Mr. Smith", room: "301" },
+              { subject: "Algorithms", teacher: "Ms. Johnson", room: "302" },
+              { subject: "Creative Writing", teacher: "Mr. Brown", room: "303" },
+              { subject: "Poetry", teacher: "Ms. Davis", room: "304" },
+              { subject: "Chemistry", teacher: "Mr. Wilson", room: "305" },
+              { subject: "Modern History", teacher: "Mr. Clark", room: "306" },
+              { subject: "Geology", teacher: "Ms. Lewis", room: "307" },
+            ],
+            [
+              { subject: "Calculus", teacher: "Mr. Smith", room: "301" },
+              { subject: "Algorithms", teacher: "Ms. Johnson", room: "302" },
+              { subject: "Creative Writing", teacher: "Mr. Brown", room: "303" },
+              { subject: "Poetry", teacher: "Ms. Davis", room: "304" },
+              { subject: "Chemistry", teacher: "Mr. Wilson", room: "305" },
+              { subject: "Modern History", teacher: "Mr. Clark", room: "306" },
+              { subject: "Geology", teacher: "Ms. Lewis", room: "307" },
+            ],
+            [
+              { subject: "Calculus", teacher: "Mr. Smith", room: "301" },
+              { subject: "Algorithms", teacher: "Ms. Johnson", room: "302" },
+              { subject: "Creative Writing", teacher: "Mr. Brown", room: "303" },
+              { subject: "Poetry", teacher: "Ms. Davis", room: "304" },
+              { subject: "Chemistry", teacher: "Mr. Wilson", room: "305" },
+              { subject: "Modern History", teacher: "Mr. Clark", room: "306" },
+              { subject: "Geology", teacher: "Ms. Lewis", room: "307" },
+            ],
+            [
+              { subject: "Calculus", teacher: "Mr. Smith", room: "308" },
+              { subject: "Algorithms", teacher: "Ms. Johnson", room: "309" },
+              { subject: "Creative Writing", teacher: "Mr. Brown", room: "310" },
+              { subject: "Poetry", teacher: "Ms. Davis", room: "311" },
+              { subject: "Chemistry", teacher: "Mr. Wilson", room: "312" },
+              { subject: "Modern History", teacher: "Mr. Clark", room: "313" },
+              { subject: "Geology", teacher: "Ms. Lewis", room: "314" },
+            ],
+            // Repeat for 8 more classes
           ],
-          "7 semester": [
-            { id: "1", subject: "Biology", teacher: "Mr. Anderson", room: "401" },
-            { id: "2", subject: "Math", teacher: "Ms. Thomas", room: "402" },
+          "7th semester": [
+            [
+              { subject: "Linear Algebra", teacher: "Mr. Smith", room: "401" },
+              { subject: "Machine Learning", teacher: "Ms. Johnson", room: "402" },
+              { subject: "Shakespeare", teacher: "Mr. Brown", room: "403" },
+              { subject: "Classical Urdu", teacher: "Ms. Davis", room: "404" },
+              { subject: "Biology", teacher: "Mr. Wilson", room: "405" },
+              { subject: "Ancient History", teacher: "Mr. Clark", room: "406" },
+              { subject: "Astronomy", teacher: "Ms. Lewis", room: "407" },
+            ],
+            [
+              { subject: "Linear Algebra", teacher: "Mr. Smith", room: "401" },
+              { subject: "Machine Learning", teacher: "Ms. Johnson", room: "402" },
+              { subject: "Shakespeare", teacher: "Mr. Brown", room: "403" },
+              { subject: "Classical Urdu", teacher: "Ms. Davis", room: "404" },
+              { subject: "Biology", teacher: "Mr. Wilson", room: "405" },
+              { subject: "Ancient History", teacher: "Mr. Clark", room: "406" },
+              { subject: "Astronomy", teacher: "Ms. Lewis", room: "407" },
+            ],
+            [
+              { subject: "Linear Algebra", teacher: "Mr. Smith", room: "401" },
+              { subject: "Machine Learning", teacher: "Ms. Johnson", room: "402" },
+              { subject: "Shakespeare", teacher: "Mr. Brown", room: "403" },
+              { subject: "Classical Urdu", teacher: "Ms. Davis", room: "404" },
+              { subject: "Biology", teacher: "Mr. Wilson", room: "405" },
+              { subject: "Ancient History", teacher: "Mr. Clark", room: "406" },
+              { subject: "Astronomy", teacher: "Ms. Lewis", room: "407" },
+            ],
+            [
+              { subject: "Linear Algebra", teacher: "Mr. Smith", room: "401" },
+              { subject: "Machine Learning", teacher: "Ms. Johnson", room: "402" },
+              { subject: "Shakespeare", teacher: "Mr. Brown", room: "403" },
+              { subject: "Classical Urdu", teacher: "Ms. Davis", room: "404" },
+              { subject: "Biology", teacher: "Mr. Wilson", room: "405" },
+              { subject: "Ancient History", teacher: "Mr. Clark", room: "406" },
+              { subject: "Astronomy", teacher: "Ms. Lewis", room: "407" },
+            ],
+            [
+              { subject: "Linear Algebra", teacher: "Mr. Smith", room: "401" },
+              { subject: "Machine Learning", teacher: "Ms. Johnson", room: "402" },
+              { subject: "Shakespeare", teacher: "Mr. Brown", room: "403" },
+              { subject: "Classical Urdu", teacher: "Ms. Davis", room: "404" },
+              { subject: "Biology", teacher: "Mr. Wilson", room: "405" },
+              { subject: "Ancient History", teacher: "Mr. Clark", room: "406" },
+              { subject: "Astronomy", teacher: "Ms. Lewis", room: "407" },
+            ],
+            [
+              { subject: "Linear Algebra", teacher: "Mr. Smith", room: "401" },
+              { subject: "Machine Learning", teacher: "Ms. Johnson", room: "402" },
+              { subject: "Shakespeare", teacher: "Mr. Brown", room: "403" },
+              { subject: "Classical Urdu", teacher: "Ms. Davis", room: "404" },
+              { subject: "Biology", teacher: "Mr. Wilson", room: "405" },
+              { subject: "Ancient History", teacher: "Mr. Clark", room: "406" },
+              { subject: "Astronomy", teacher: "Ms. Lewis", room: "407" },
+            ],
+            [
+              { subject: "Linear Algebra", teacher: "Mr. Smith", room: "401" },
+              { subject: "Machine Learning", teacher: "Ms. Johnson", room: "402" },
+              { subject: "Shakespeare", teacher: "Mr. Brown", room: "403" },
+              { subject: "Classical Urdu", teacher: "Ms. Davis", room: "404" },
+              { subject: "Biology", teacher: "Mr. Wilson", room: "405" },
+              { subject: "Ancient History", teacher: "Mr. Clark", room: "406" },
+              { subject: "Astronomy", teacher: "Ms. Lewis", room: "407" },
+            ],
+            [
+              { subject: "Linear Algebra", teacher: "Mr. Smith", room: "401" },
+              { subject: "Machine Learning", teacher: "Ms. Johnson", room: "402" },
+              { subject: "Shakespeare", teacher: "Mr. Brown", room: "403" },
+              { subject: "Classical Urdu", teacher: "Ms. Davis", room: "404" },
+              { subject: "Biology", teacher: "Mr. Wilson", room: "405" },
+              { subject: "Ancient History", teacher: "Mr. Clark", room: "406" },
+              { subject: "Astronomy", teacher: "Ms. Lewis", room: "407" },
+            ],
+            [
+              { subject: "Linear Algebra", teacher: "Mr. Smith", room: "401" },
+              { subject: "Machine Learning", teacher: "Ms. Johnson", room: "402" },
+              { subject: "Shakespeare", teacher: "Mr. Brown", room: "403" },
+              { subject: "Classical Urdu", teacher: "Ms. Davis", room: "404" },
+              { subject: "Biology", teacher: "Mr. Wilson", room: "405" },
+              { subject: "Ancient History", teacher: "Mr. Clark", room: "406" },
+              { subject: "Astronomy", teacher: "Ms. Lewis", room: "407" },
+            ],
+            [
+              { subject: "Linear Algebra", teacher: "Mr. Smith", room: "408" },
+              { subject: "Machine Learning", teacher: "Ms. Johnson", room: "409" },
+              { subject: "Shakespeare", teacher: "Mr. Brown", room: "410" },
+              { subject: "Classical Urdu", teacher: "Ms. Davis", room: "411" },
+              { subject: "Biology", teacher: "Mr. Wilson", room: "412" },
+              { subject: "Ancient History", teacher: "Mr. Clark", room: "413" },
+              { subject: "Astronomy", teacher: "Ms. Lewis", room: "414" },
+            ],
+            // Repeat for 8 more classes
           ],
         };
 
-
-
-       export const newData ={
-          "Computer Science G1":[ {
-            "id": "1",
-            "subject": "Math",
-            "teacher": "Mr. Smith",
-            "room": "101"
-           
-          },
-          {
-            "id": "2",
-            "subject": "Science",
-            "teacher": "Ms. Johnson",
-            "room": "102"
-          } ,
-          {
-            "id": "3",
-            "subject": "Math",
-            "teacher": "Mr. Smith",
-            "room": "101"
-           
-          },
-          {
-            "id": "4",
-            "subject": "Science",
-            "teacher": "Ms. Johnson",
-            "room": "102"
-          },
-          {
-            "id": "5",
-            "subject": "Math",
-            "teacher": "Mr. Smith",
-            "room": "101"
-           
-          },
-          {
-            "id": "6",
-            "subject": "Science",
-            "teacher": "Ms. Johnson",
-            "room": "102"
-          },
-          {
-            "id": "7",
-            "subject": "Math",
-            "teacher": "Mr. Smith",
-            "room": "101"
-           
-          },
+     export const morningBsClass = [
+          { name: 'CS G1', subjects: ['Math', 'Science', 'History', 'English', 'Art', 'Physics', 'Chemistry'] },
+          { name: 'CS G2', subjects: ['Geography', 'Biology', 'Math', 'Physical Education', 'Music', 'Computer Science', 'Literature'] },
+          { name: 'BBA G1', subjects: ['Math', 'Science', 'History', 'English', 'Art', 'Physics', 'Chemistry'] },
+          { name: 'BBA G2', subjects: ['Geography', 'Biology', 'Math', 'Physical Education', 'Music', 'Computer Science', 'Literature'] },
+          { name: 'English', subjects: ['Math', 'Science', 'History', 'English', 'Art', 'Physics', 'Chemistry'] },
+          { name: 'Mathematics', subjects: ['Geography', 'Biology', 'Math', 'Physical Education', 'Music', 'Computer Science', 'Literature'] },
+          { name: 'Physics', subjects: ['Math', 'Science', 'History', 'English', 'Art', 'Physics', 'Chemistry'] },
+          { name: 'Chemistry', subjects: ['Geography', 'Biology', 'Math', 'Physical Education', 'Music', 'Computer Science', 'Literature'] },
+          { name: 'Urdu', subjects: ['Math', 'Science', 'History', 'English', 'Art', 'Physics', 'Chemistry'] },
+          { name: 'Islamiyat', subjects: ['Geography', 'Biology', 'Math', 'Physical Education', 'Music', 'Computer Science', 'Literature'] },
+         
         
-        ],
-        "Computer Science G2":[ {
-          "id": "1",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
+        ];
+     export const eveningBsClass = [
+          { name: 'CS G1', subjects: ['Math', 'Science', 'History', 'English', 'Art', 'Physics', 'Chemistry'] },
+          { name: 'CS G2', subjects: ['Geography', 'Biology', 'Math', 'Physical Education', 'Music', 'Computer Science', 'Literature'] },
+          { name: 'BBA G1', subjects: ['Math', 'Science', 'History', 'English', 'Art', 'Physics', 'Chemistry'] },
+          { name: 'BBA G2', subjects: ['Geography', 'Biology', 'Math', 'Physical Education', 'Music', 'Computer Science', 'Literature'] },
+          { name: 'English', subjects: ['Math', 'Science', 'History', 'English', 'Art', 'Physics', 'Chemistry'] },
+          { name: 'Mathematics', subjects: ['Geography', 'Biology', 'Math', 'Physical Education', 'Music', 'Computer Science', 'Literature'] },
+          { name: 'Physics', subjects: ['Math', 'Science', 'History', 'English', 'Art', 'Physics', 'Chemistry'] },
+          { name: 'Chemistry', subjects: ['Geography', 'Biology', 'Math', 'Physical Education', 'Music', 'Computer Science', 'Literature'] },
+          { name: 'Urdu', subjects: ['Math', 'Science', 'History', 'English', 'Art', 'Physics', 'Chemistry'] },
+          { name: 'Islamiyat', subjects: ['Geography', 'Biology', 'Math', 'Physical Education', 'Music', 'Computer Science', 'Literature'] },
+      
          
-        },
-        {
-          "id": "2",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        } ,
-        {
-          "id": "3",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "4",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "5",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "6",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "7",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-
         
+        ];
         
-        ],
-        "BBA G1":[ {
-          "id": "1",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "2",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        } ,
-        {
-          "id": "3",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "4",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "5",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "6",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "7",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-
-        
-        ],
-        "BBA G2":[ {
-          "id": "1",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "2",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        } ,
-        {
-          "id": "3",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "4",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "5",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "6",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "7",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-
-        
-        ],
-        "English":[ {
-          "id": "1",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "2",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        } ,
-        {
-          "id": "3",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "4",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "5",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "6",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "7",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-
-        
-        ],
-        "Mathematics":[ {
-          "id": "1",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "2",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        } ,
-        {
-          "id": "3",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "4",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "5",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "6",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "7",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-
-        
-        ],
-        "Physics":[ {
-          "id": "1",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "2",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        } ,
-        {
-          "id": "3",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "4",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "5",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "6",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "7",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-
-        
-        ],
-        "Chemistry":[ {
-          "id": "1",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "2",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        } ,
-        {
-          "id": "3",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "4",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "5",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "6",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "7",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-
-        
-        ],
-        "Urdu":[ {
-          "id": "1",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "2",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        } ,
-        {
-          "id": "3",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "4",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "5",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "6",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "7",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-
-        
-        ],
-        "Islamiyat":[ {
-          "id": "1",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "2",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        } ,
-        {
-          "id": "3",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "4",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "5",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-        {
-          "id": "6",
-          "subject": "Science",
-          "teacher": "Ms. Johnson",
-          "room": "102"
-        },
-        {
-          "id": "7",
-          "subject": "Math",
-          "teacher": "Mr. Smith",
-          "room": "101"
-         
-        },
-
-        
-        ],
-        }

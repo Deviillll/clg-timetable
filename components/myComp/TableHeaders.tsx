@@ -15,7 +15,7 @@ const TableHeaders = () => {
   const Group = useInformationStore((state) => state.Group);
 
   return (
-    <div className="flex gap-x-2  w-full">
+    <div className="flex gap-x-1  w-full">
       {Group === "Bs Morning" ||
       Group === "Intermediate Morning" ||
       Group === "ADP"

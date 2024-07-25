@@ -1,6 +1,7 @@
 import DepartmentsList from "./myComp/DepartmentsList"
 import MyTable from "./myComp/MyTable"
 import NewDepartment from "./myComp/NewDepartment"
+import Timetable from "./myComp/TimeTable"
 
 
 
@@ -14,8 +15,9 @@ const TableContainer = (props: Props) => {
 
         {/* new deparment have no bugs */}
         {/* <NewDepartment/> */}
-        <MyTable/>
-        
+        {/* <MyTable/>
+         */}
+         <Timetable/>
     </div>
   )
 }
