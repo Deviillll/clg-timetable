@@ -10,7 +10,7 @@ const Timetable = () => {
 
   return (
     <div className="flex flex-col my-8 px-1">
-      <div className="flex gap-x-1">
+      <div className="flex gap-x-2">
         <div className="w-40">
           <Button  className="h-10 w-full">
             Departments
